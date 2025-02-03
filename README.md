@@ -1,0 +1,3 @@
+# Rust Undefined Behavior Example
+
+This repository demonstrates a common source of undefined behavior in Rust: modifying a vector through a raw pointer after potential reallocation.  The code attempts to change the first element of a vector using a raw pointer obtained via `as_mut_ptr()`. However,  vector operations may reallocate its internal memory, invalidating the pointer, leading to unpredictable results. The solution shows a safer approach to modify vector elements.
